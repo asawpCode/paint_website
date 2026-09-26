@@ -109,13 +109,11 @@ h2{font-weight:300;font-size:clamp(32px,5vw,54px);line-height:1.08}
 .sub{font-style:italic;color:var(--ink-soft);font-size:clamp(18px,2.1vw,21px);margin-top:12px;max-width:56ch}
 
 /* About */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,80px);align-items:start}
-.portrait{border:1px solid var(--line);background:var(--bg-2);aspect-ratio:4/5;overflow:hidden}
-.portrait img{width:100%;height:100%;object-fit:cover}
-.bio h2{margin-bottom:26px}
-.bio-heading{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-bottom:26px}
-.bio-heading h2{margin:0}
-.bio-heading img{width:min(180px,30vw);max-height:120px;object-fit:contain}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.portrait{border:1px solid var(--line);background:var(--bg-2);aspect-ratio:5/8;overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:contain}
+.bio h2{margin-bottom:8px}
+.bio h3{font-size:clamp(20px,2.5vw,28px);font-style:italic;font-weight:400;line-height:1.2;color:var(--gold-bright);margin-bottom:22px}
 .bio p{color:var(--ink-soft);margin-bottom:18px;max-width:62ch}
 .bio p.lead{color:var(--ink);font-size:1.12em}
 .bio blockquote{margin:28px 0;padding-left:22px;border-left:2px solid var(--gold);font-style:italic;
@@ -163,6 +161,9 @@ h2{font-weight:300;font-size:clamp(32px,5vw,54px);line-height:1.08}
 .chan:hover{border-color:var(--gold);background:rgba(201,160,90,.07);transform:translateY(-2px)}
 .chan small{font-family:var(--sans);font-size:12px;color:var(--gold)}
 .chan span{font-family:var(--sans);font-size:16px;color:var(--ink)}
+.chan-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.chan-links a{font-family:var(--sans);font-size:16px;color:var(--ink);text-decoration:none;transition:color .3s}
+.chan-links a:hover{color:var(--gold-bright)}
 .place{font-family:var(--sans);font-size:13px;color:var(--ink-dim);margin-top:34px}
 
 /* Footer */
@@ -241,17 +242,16 @@ footer button:hover{color:var(--gold-bright)}
 <!-- About -->
 <section id="vorstellung">
   <div class="wrap about">
-    <div class="portrait"><img id="portrait" src="atelier_2.jpg" alt="Prometheus Lucis im Atelier" loading="lazy" onerror="this.parentNode.style.display='none'">
+    <div class="portrait"><img id="portrait" src="atelier_2.jpg" alt="Collage aus dem Atelier von Prometheus Lucis" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
     <div class="bio">
-      <div class="bio-heading">
-        <h2 data-de="Ich bin Prometheus Lucis." data-en="I am Prometheus Lucis.">Ich bin Prometheus Lucis.</h2>
-        <img src="description.JPG" alt="Beschreibung zu Prometheus Lucis" loading="lazy">
-      </div>
-      <p class="lead" data-de="Kunst ist für mich mehr als Handwerk. Sie ist Ausdruck von Bewusstsein, Emotion und innerer Verbindung. Mit Farben, Licht und Formen erschaffe ich Werke, die berühren, inspirieren und Raum für eigene Erfahrungen schaffen." data-en="Art, to me, is more than craft. It is an expression of consciousness, emotion and inner connection. With colour, light and form I create works that move, inspire and leave room for one's own experience.">Kunst ist für mich mehr als Handwerk. Sie ist Ausdruck von Bewusstsein, Emotion und innerer Verbindung. Mit Farben, Licht und Formen erschaffe ich Werke, die berühren, inspirieren und Raum für eigene Erfahrungen schaffen.</p>
-      <p data-de="Obwohl meine Arbeiten der Kunst zugeordnet werden, sehe ich mich in erster Linie als Handwerker mit einer tiefen Leidenschaft für die Kunst. Besonders inspiriert mich Michelangelo, dessen Hingabe an Form, Material und Schöpfung bis heute nachwirkt." data-en="Although my work is regarded as art, I see myself first as a craftsman with a deep passion for art. I am especially inspired by Michelangelo, whose devotion to form, material and creation still resonates today.">Obwohl meine Arbeiten der Kunst zugeordnet werden, sehe ich mich in erster Linie als Handwerker mit einer tiefen Leidenschaft für die Kunst. Besonders inspiriert mich Michelangelo, dessen Hingabe an Form, Material und Schöpfung bis heute nachwirkt.</p>
-      <p data-de="Meine Arbeiten verbinden Mixed Media, Airbrush und klassische Malerei zu einer eigenständigen Bildsprache zwischen Moderne, Ausdruckskraft und spiritueller Tiefe." data-en="My work brings together mixed media, airbrush and classical painting into a language of its own, between modernity, expression and spiritual depth.">Meine Arbeiten verbinden Mixed Media, Airbrush und klassische Malerei zu einer eigenständigen Bildsprache zwischen Moderne, Ausdruckskraft und spiritueller Tiefe.</p>
-      <blockquote data-de="Ein Bild soll atmen können. Denn erst in Raum, Stille und Lebendigkeit entstehen Frequenz, Wirkung und Resonanz." data-en="A painting must be able to breathe. For only in space, stillness and aliveness do frequency, effect and resonance arise.">Ein Bild soll atmen können. Denn erst in Raum, Stille und Lebendigkeit entstehen Frequenz, Wirkung und Resonanz.</blockquote>
-      <div class="sig">Fredy Wallach</div>
+      <h2 data-de="Mein Weg" data-en="My Journey">Mein Weg</h2>
+      <h3 data-de="Von der Neugier zur Passion" data-en="From Curiosity to Passion">Von der Neugier zur Passion</h3>
+      <p data-de="Wenn ich an meine ersten Erfahrungen mit dem Malen zurückdenke, muss ich heute manchmal schmunzeln. Bis zur 4. Klasse hatte ich vermutlich eine der schlechtesten Noten im Malen. Es sah wohl eher so aus, als hätte ich mit den Füßen gemalt. Dann kam ein Urlaub in Polen, der vieles verändern sollte. Dort begegnete ich einem älteren Mann, der gerade malte. Ich beobachtete ihn fasziniert. Mich packte der Wunsch, es selbst zu können. Also schaute ich genau hin, probierte aus und lernte durch Beobachtung. Und plötzlich war vieles möglich. Ab der 5. Klasse gehörte Kunst zu meinen besten Fächern. Aus anfänglicher Neugier wurde Begeisterung – und aus Begeisterung eine Leidenschaft." data-en="When I look back on my first experiences with painting, I sometimes have to smile. Until fourth grade, I probably had one of the worst grades in art. It looked more as though I had painted with my feet. Then came a holiday in Poland that was to change a lot. There I met an older man who was painting. I watched him, fascinated. I was seized by the desire to do it myself. So I watched closely, experimented, and learned by observing. Suddenly, so much seemed possible. From fifth grade onward, art was one of my best subjects. Initial curiosity became enthusiasm, and enthusiasm became a passion.">Wenn ich an meine ersten Erfahrungen mit dem Malen zurückdenke, muss ich heute manchmal schmunzeln. Bis zur 4. Klasse hatte ich vermutlich eine der schlechtesten Noten im Malen. Es sah wohl eher so aus, als hätte ich mit den Füßen gemalt. Dann kam ein Urlaub in Polen, der vieles verändern sollte. Dort begegnete ich einem älteren Mann, der gerade malte. Ich beobachtete ihn fasziniert. Mich packte der Wunsch, es selbst zu können. Also schaute ich genau hin, probierte aus und lernte durch Beobachtung. Und plötzlich war vieles möglich. Ab der 5. Klasse gehörte Kunst zu meinen besten Fächern. Aus anfänglicher Neugier wurde Begeisterung – und aus Begeisterung eine Leidenschaft.</p>
+      <p data-de="Ich begann immer mehr, immer größer und immer vielseitiger zu gestalten: Plakate für Modeschauen und Veranstaltungen, später Fotografie, um 1990 schließlich Airbrush, danach Videografie und immer wieder großflächige Wandmalereien bei mir selbst und bei Freunden. Mit der Zeit kam die Computergrafik hinzu, oft in Verbindung mit Fotografie. Doch das Malen ließ mich nie ganz los. Immer wieder zog es mich zurück zu Farben, Formen und großen Flächen." data-en="I began creating more and more, on a larger scale and in an ever greater variety of ways: posters for fashion shows and events, then photography, and around 1990, airbrushing, followed by video work and, time and again, large-scale murals at my home and at friends' homes. Over time, computer graphics entered the picture, often combined with photography. But painting never let go of me completely. Again and again, I found my way back to colours, shapes and large surfaces.">Ich begann immer mehr, immer größer und immer vielseitiger zu gestalten: Plakate für Modeschauen und Veranstaltungen, später Fotografie, um 1990 schließlich Airbrush, danach Videografie und immer wieder großflächige Wandmalereien bei mir selbst und bei Freunden. Mit der Zeit kam die Computergrafik hinzu, oft in Verbindung mit Fotografie. Doch das Malen ließ mich nie ganz los. Immer wieder zog es mich zurück zu Farben, Formen und großen Flächen.</p>
+      <p data-de="Nach einigen Jahren einer kreativen Pause entstand in mir erneut ein sehr klarer Impuls: Ich begann mir Schritt für Schritt all das anzuschaffen, was ich für meinen weiteren Weg brauchte – Farben, Airbrushes, Werkzeuge und verschiedenste Materialien. Aus einer inneren Mission wurde eine Passion. Und irgendwann wusste ich: So möchte ich sein. So möchte ich arbeiten." data-en="After several years of creative pause, a very clear impulse arose in me again. Step by step, I began acquiring everything I needed for the path ahead: paints, airbrushes, tools and a wide range of materials. An inner mission became a passion. And at some point I knew: This is who I want to be. This is how I want to work.">Nach einigen Jahren einer kreativen Pause entstand in mir erneut ein sehr klarer Impuls: Ich begann mir Schritt für Schritt all das anzuschaffen, was ich für meinen weiteren Weg brauchte – Farben, Airbrushes, Werkzeuge und verschiedenste Materialien. Aus einer inneren Mission wurde eine Passion. Und irgendwann wusste ich: So möchte ich sein. So möchte ich arbeiten.</p>
+      <p data-de="Heute verbinde ich unterschiedliche Techniken und Materialien miteinander. Acryl, Airbrush, Pinsel, Strukturmaterialien und moderne Gestaltungsmöglichkeiten geben mir die Freiheit, Kunst auf unterschiedlichsten Untergründen entstehen zu lassen – auf Leinwand ebenso wie auf Wänden, HDF, Kunststoff, Möbeln oder anderen geeigneten Flächen. Dabei geht es mir nicht darum, einfach nur etwas zu bemalen. Ich möchte Bilder entstehen lassen, die wirken, die eine eigene Atmosphäre besitzen und die den Raum verändern. Mein Ziel ist es, das Bild atmen zu lassen." data-en="Today I combine different techniques and materials. Acrylics, airbrushing, brushes, texture materials and modern creative tools give me the freedom to make art on a wide variety of surfaces: canvas as well as walls, HDF, plastic, furniture and other suitable surfaces. It is not simply about painting something. I want to create images that have an impact, possess an atmosphere of their own and transform a space. My goal is to let the image breathe.">Heute verbinde ich unterschiedliche Techniken und Materialien miteinander. Acryl, Airbrush, Pinsel, Strukturmaterialien und moderne Gestaltungsmöglichkeiten geben mir die Freiheit, Kunst auf unterschiedlichsten Untergründen entstehen zu lassen – auf Leinwand ebenso wie auf Wänden, HDF, Kunststoff, Möbeln oder anderen geeigneten Flächen. Dabei geht es mir nicht darum, einfach nur etwas zu bemalen. Ich möchte Bilder entstehen lassen, die wirken, die eine eigene Atmosphäre besitzen und die den Raum verändern. Mein Ziel ist es, das Bild atmen zu lassen.</p>
+      <p data-de="Mein großes Vorbild ist Michelangelo. Mich fasziniert die Lebendigkeit seiner Werke – und ebenso die Ausdruckskraft und Hingabe der alten Meister. Von ihnen inspiriert, suche ich meinen eigenen Weg: mit modernen Techniken, mit Farbe, Licht und meiner ganz persönlichen Verbindung zur Kunst. Was einst mit einer schlechten Schulnote begann, ist heute ein wesentlicher Teil meines Lebens geworden. Aus der Mission wurde Passion. Und aus der Passion wurde mein Weg." data-en="Michelangelo is my great inspiration. I am fascinated by the vitality of his works, as well as the expressive power and dedication of the Old Masters. Inspired by them, I seek my own path: with modern techniques, colour, light and my very personal connection to art. What began with a poor grade at school has become an essential part of my life. The mission became a passion. And passion became my path.">Mein großes Vorbild ist Michelangelo. Mich fasziniert die Lebendigkeit seiner Werke – und ebenso die Ausdruckskraft und Hingabe der alten Meister. Von ihnen inspiriert, suche ich meinen eigenen Weg: mit modernen Techniken, mit Farbe, Licht und meiner ganz persönlichen Verbindung zur Kunst. Was einst mit einer schlechten Schulnote begann, ist heute ein wesentlicher Teil meines Lebens geworden. Aus der Mission wurde Passion. Und aus der Passion wurde mein Weg.</p>
+      <div class="sig">Prometheus Lucis</div>
     </div>
   </div>
 </section>
@@ -281,8 +281,13 @@ footer button:hover{color:var(--gold-bright)}
     <p class="sub" data-de="Für Anfragen zu Werken, Auftragsarbeiten und Besichtigungen im Atelier." data-en="For enquiries about works, commissions and studio visits.">Für Anfragen zu Werken, Auftragsarbeiten und Besichtigungen im Atelier.</p>
     <div class="channels">
       <a class="chan" href="mailto:prometheus.arte@gmx.net"><small data-de="E-Mail" data-en="Email">E-Mail</small><span>prometheus.arte@gmx.net</span></a>
-      <a class="chan" href="tel:+4915788350658"><small data-de="Telefon" data-en="Phone">Telefon</small><span>0157 8 8350 658</span></a>
-      <a class="chan" href="https://wa.me/4915788350658" target="_blank" rel="noopener"><small>WhatsApp</small><span>0157 8 8350 658</span></a>
+      <div class="chan">
+        <small data-de="Telefon / WhatsApp" data-en="Phone / WhatsApp">Telefon / WhatsApp</small>
+        <div class="chan-links">
+          <a href="tel:+4915788350658" data-de="Anrufen: 0157 8 8350 658" data-en="Call: 0157 8 8350 658">Anrufen: 0157 8 8350 658</a>
+          <a href="https://wa.me/4915788350658" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
     </div>
     <p class="place" data-de="Atelier Hattingen, Ruhrgebiet" data-en="Studio in Hattingen, Ruhr area">Atelier Hattingen, Ruhrgebiet</p>
   </div>
@@ -364,55 +369,55 @@ var WORKS = [
     meta:'Mixed Media · Acryl & Spachteltechnik auf Leinwand',
     de:'Der Lichtbringer: Form, Material und Schöpfung in klassischer Tiefe.',
     en:'The light-bringer: form, material and creation in classical depth.',
-    ratio:0.8, price:900, status:'available' },
+    ratio:0.8, price:900, status:'nfs' },
 
   { file:'carmen.jpg', title:'Color Esperanza — Carmen',
     meta:'Mixed Media · Acryl auf Leinwand · 90 × 90 cm',
     de:'Bewegung, Stolz und innere Glut: der ungezähmte Geist des Flamenco.',
     en:'Movement, pride and inner fire: the untamed spirit of flamenco.',
-    ratio:1, price:450, status:'available' },
+    ratio:1, price:450, status:'nfs' },
 
   { file:'helena_2.jpg', title:'Helena — Troja',
     meta:'Mixed Media · Airbrush & Acryl auf Leinwand',
     de:'Stolz, Anmut und Schicksal im goldenen Schein der Antike.',
     en:'Pride, grace and destiny in the golden glow of antiquity.',
-    ratio:0.75, price:750, status:'available' },
+    ratio:0.75, price:750, status:'nfs' },
 
   { file:'trance.JPG', title:'Trance',
     meta:'Original',
     de:'Ein Originalwerk aus dem Atelier.',
     en:'An original work from the studio.',
-    ratio:0.8, price:null, status:'available' },
+    ratio:0.8, price:null, status:'nfs' },
 
   { file:'dolce_vita.jpg', title:'Dolce Vita',
     meta:'Original',
     de:'Ein Originalwerk aus dem Atelier.',
     en:'An original work from the studio.',
-    ratio:0.8, price:null, status:'available' },
+    ratio:0.8, price:null, status:'nfs' },
 
   { file:'seele.jpg', title:'Seele',
     meta:'Mixed Media · Airbrush & Acryl auf Leinwand',
     de:'Die Seele im Dialog mit dem Licht: Befreiung, Hingabe und strahlende Energie.',
     en:'The soul in dialogue with the light: liberation, devotion and radiant energy.',
-    ratio:0.64, price:650, status:'available' },
+    ratio:0.64, price:650, status:'nfs' },
 
   { file:'tobe.jpg', title:'To Be',
     meta:'Airbrush & Acryl auf Leinwand',
     de:'Hingabe an den Augenblick: Wärme, innere Ruhe und die Freiheit des Seins.',
     en:'Devotion to the moment: warmth, inner peace and the freedom of being.',
-    ratio:0.56, price:500, status:'available' },
+    ratio:0.56, price:500, status:'nfs' },
 
   { file:'albacio.jpg', title:'Al Bacio',
     meta:'Mixed Media · Airbrush & Acryl auf Leinwand',
     de:'Zwei Seelen im Augenblick der Berührung, durchzogen von Gold.',
     en:'Two souls in the moment of touch, threaded with gold.',
-    ratio:0.8, price:null, status:'sold' },
+    ratio:0.8, price:null, status:'nfs' },
 
   { file:'popart.jpg', title:'Bittersüß',
     meta:'Airbrush & Acryl auf Leinwand',
     de:'Pop-Art zwischen Schärfe und Süße: ein Ausbruch von Farbe und Charakter.',
     en:'Pop art between sharp and sweet: an outburst of colour and character.',
-    ratio:0.8, price:400, status:'available' },
+    ratio:0.8, price:400, status:'nfs' },
 
   { file:'fox.jpg', title:'Lach mal wieder',
     meta:'Airbrush auf Papier',
@@ -421,10 +426,10 @@ var WORKS = [
     ratio:1, price:null, status:'nfs' },
 
   { file:'leinwand.jpg', title:'Leinwand',
-    ratio:0.742, price:350, status:'available' },
+    ratio:0.742, price:350, status:'nfs' },
 
   { file:'tapete.jpg', title:'Tapete',
-    ratio:1.137, price:300, status:'available' }
+    ratio:1.137, price:300, status:'nfs' }
 ];
 
 /* ── i18n ──────────────────────────────────────────────────────────────── */

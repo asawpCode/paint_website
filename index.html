@@ -113,6 +113,9 @@ h2{font-weight:300;font-size:clamp(32px,5vw,54px);line-height:1.08}
 .portrait{border:1px solid var(--line);background:var(--bg-2);aspect-ratio:4/5;overflow:hidden}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .bio h2{margin-bottom:26px}
+.bio-heading{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-bottom:26px}
+.bio-heading h2{margin:0}
+.bio-heading img{width:min(180px,30vw);max-height:120px;object-fit:contain}
 .bio p{color:var(--ink-soft);margin-bottom:18px;max-width:62ch}
 .bio p.lead{color:var(--ink);font-size:1.12em}
 .bio blockquote{margin:28px 0;padding-left:22px;border-left:2px solid var(--gold);font-style:italic;
@@ -238,9 +241,12 @@ footer button:hover{color:var(--gold-bright)}
 <!-- About -->
 <section id="vorstellung">
   <div class="wrap about">
-    <div class="portrait"><img id="portrait" src="atelier.jpg" alt="Prometheus Lucis im Atelier" loading="lazy" onerror="this.parentNode.style.display='none'">
+    <div class="portrait"><img id="portrait" src="atelier_2.jpg" alt="Prometheus Lucis im Atelier" loading="lazy" onerror="this.parentNode.style.display='none'">
     <div class="bio">
-      <h2 data-de="Ich bin Prometheus Lucis." data-en="I am Prometheus Lucis.">Ich bin Prometheus Lucis.</h2>
+      <div class="bio-heading">
+        <h2 data-de="Ich bin Prometheus Lucis." data-en="I am Prometheus Lucis.">Ich bin Prometheus Lucis.</h2>
+        <img src="description.JPG" alt="Beschreibung zu Prometheus Lucis" loading="lazy">
+      </div>
       <p class="lead" data-de="Kunst ist für mich mehr als Handwerk. Sie ist Ausdruck von Bewusstsein, Emotion und innerer Verbindung. Mit Farben, Licht und Formen erschaffe ich Werke, die berühren, inspirieren und Raum für eigene Erfahrungen schaffen." data-en="Art, to me, is more than craft. It is an expression of consciousness, emotion and inner connection. With colour, light and form I create works that move, inspire and leave room for one's own experience.">Kunst ist für mich mehr als Handwerk. Sie ist Ausdruck von Bewusstsein, Emotion und innerer Verbindung. Mit Farben, Licht und Formen erschaffe ich Werke, die berühren, inspirieren und Raum für eigene Erfahrungen schaffen.</p>
       <p data-de="Obwohl meine Arbeiten der Kunst zugeordnet werden, sehe ich mich in erster Linie als Handwerker mit einer tiefen Leidenschaft für die Kunst. Besonders inspiriert mich Michelangelo, dessen Hingabe an Form, Material und Schöpfung bis heute nachwirkt." data-en="Although my work is regarded as art, I see myself first as a craftsman with a deep passion for art. I am especially inspired by Michelangelo, whose devotion to form, material and creation still resonates today.">Obwohl meine Arbeiten der Kunst zugeordnet werden, sehe ich mich in erster Linie als Handwerker mit einer tiefen Leidenschaft für die Kunst. Besonders inspiriert mich Michelangelo, dessen Hingabe an Form, Material und Schöpfung bis heute nachwirkt.</p>
       <p data-de="Meine Arbeiten verbinden Mixed Media, Airbrush und klassische Malerei zu einer eigenständigen Bildsprache zwischen Moderne, Ausdruckskraft und spiritueller Tiefe." data-en="My work brings together mixed media, airbrush and classical painting into a language of its own, between modernity, expression and spiritual depth.">Meine Arbeiten verbinden Mixed Media, Airbrush und klassische Malerei zu einer eigenständigen Bildsprache zwischen Moderne, Ausdruckskraft und spiritueller Tiefe.</p>
@@ -366,11 +372,23 @@ var WORKS = [
     en:'Movement, pride and inner fire: the untamed spirit of flamenco.',
     ratio:1, price:450, status:'available' },
 
-  { file:'helena.jpg', title:'Helena — Troja',
+  { file:'helena_2.jpg', title:'Helena — Troja',
     meta:'Mixed Media · Airbrush & Acryl auf Leinwand',
     de:'Stolz, Anmut und Schicksal im goldenen Schein der Antike.',
     en:'Pride, grace and destiny in the golden glow of antiquity.',
     ratio:0.75, price:750, status:'available' },
+
+  { file:'trance.JPG', title:'Trance',
+    meta:'Original',
+    de:'Ein Originalwerk aus dem Atelier.',
+    en:'An original work from the studio.',
+    ratio:0.8, price:null, status:'available' },
+
+  { file:'dolce_vita.jpg', title:'Dolce Vita',
+    meta:'Original',
+    de:'Ein Originalwerk aus dem Atelier.',
+    en:'An original work from the studio.',
+    ratio:0.8, price:null, status:'available' },
 
   { file:'seele.jpg', title:'Seele',
     meta:'Mixed Media · Airbrush & Acryl auf Leinwand',
